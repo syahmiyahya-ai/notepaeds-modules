@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "moduleVersion": "1.1.0",
+  "moduleVersion": "1.2.0",
   "kind": "calculators",
   "entries": [
     {
@@ -506,6 +506,295 @@
             "intermediate": "Intermediate risk — observation versus CT; clinical judgement required.",
             "low": "Very low risk — CT generally not indicated by rule; reassess and safety-net."
           }
+        }
+      ]
+    },
+    {
+      "id": "resus",
+      "kind": "resus",
+      "title": "Resus medications — one weight",
+      "enabled": true,
+      "source": "PED HTA Paediatric Emergency Drug Calculator, May 2024. Displayed maxima used as instructed.",
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/16BNlgbZCMMKfORggqb511NgsKDWUEQ28/edit?gid=2121511188",
+      "note": "Weight applies to every row. Separate neonatal/child and indication-specific rows remain visible; select the appropriate regimen. Results follow the supplied May 2024 workbook. Volumes are shown only where supplied or explicitly defined.",
+      "rows": [
+        {
+          "name": "IV/IO Adrenaline (0.1 mg/mL)",
+          "factors": [
+            0.01
+          ],
+          "unit": "mg",
+          "caps": [
+            1
+          ],
+          "regimen": "0.01 mg/kg; maximum 1 mg"
+        },
+        {
+          "name": "IV/IO Adrenaline diluted volume",
+          "factors": [
+            0.1
+          ],
+          "unit": "mL",
+          "caps": [
+            10
+          ],
+          "regimen": "0.1 mg/mL: dilute 1 mL of 1 mg/mL with 9 mL NS"
+        },
+        {
+          "name": "IV Fluid bolus (except dengue)",
+          "factors": [
+            10
+          ],
+          "unit": "mL",
+          "regimen": "10 mL/kg over 5–10 minutes"
+        },
+        {
+          "name": "IV Fluid bolus (cardiogenic shock) / packed cells",
+          "factors": [
+            5
+          ],
+          "unit": "mL",
+          "regimen": "5 mL/kg"
+        },
+        {
+          "name": "IV Glucose / Dextrose 10%",
+          "factors": [
+            3
+          ],
+          "unit": "mL",
+          "regimen": "3 mL/kg"
+        },
+        {
+          "name": "DC shock",
+          "factors": [
+            4
+          ],
+          "unit": "J",
+          "caps": [
+            360
+          ],
+          "regimen": "4 J/kg; maximum 360 J"
+        },
+        {
+          "name": "IV Amiodarone (VF/pVT)",
+          "factors": [
+            5
+          ],
+          "unit": "mg",
+          "caps": [
+            300
+          ],
+          "regimen": "5 mg/kg over 3 minutes"
+        },
+        {
+          "name": "IM Adrenaline 1 mg/mL (anaphylaxis)",
+          "factors": [
+            0.01
+          ],
+          "unit": "mg",
+          "caps": [
+            0.5
+          ],
+          "regimen": "Source specifies age >6 months; minimum 0.1 mg",
+          "minimum": 0.1
+        },
+        {
+          "name": "IV Fentanyl (intubation)",
+          "factors": [
+            1,
+            2
+          ],
+          "unit": "mcg",
+          "caps": [
+            50,
+            100
+          ],
+          "regimen": "1–2 mcg/kg; displayed maximum 50–100 mcg"
+        },
+        {
+          "name": "IV Ketamine (intubation)",
+          "factors": [
+            1,
+            2
+          ],
+          "unit": "mg",
+          "regimen": "1–2 mg/kg"
+        },
+        {
+          "name": "IV Propofol (intubation)",
+          "factors": [
+            0.5,
+            2
+          ],
+          "unit": "mg",
+          "regimen": "0.5–2 mg/kg"
+        },
+        {
+          "name": "IV Suxamethonium (neonate)",
+          "factors": [
+            2
+          ],
+          "unit": "mg",
+          "caps": [
+            100
+          ],
+          "regimen": "2 mg/kg"
+        },
+        {
+          "name": "IV Suxamethonium (child)",
+          "factors": [
+            1
+          ],
+          "unit": "mg",
+          "caps": [
+            100
+          ],
+          "regimen": "1 mg/kg"
+        },
+        {
+          "name": "IV Rocuronium",
+          "factors": [
+            0.6,
+            1.2
+          ],
+          "unit": "mg",
+          "caps": [
+            50,
+            50
+          ],
+          "regimen": "0.6–1.2 mg/kg; source formula caps at 50 mg and rounds to whole mg",
+          "round": 0
+        },
+        {
+          "name": "IV Morphine",
+          "factors": [
+            0.1,
+            0.2
+          ],
+          "unit": "mg",
+          "caps": [
+            10,
+            10
+          ],
+          "regimen": "0.1–0.2 mg/kg"
+        },
+        {
+          "name": "IV Midazolam (slow bolus)",
+          "factors": [
+            0.1,
+            0.2
+          ],
+          "unit": "mg",
+          "caps": [
+            5,
+            10
+          ],
+          "regimen": "0.1–0.2 mg/kg"
+        },
+        {
+          "name": "IV Diazepam",
+          "factors": [
+            0.25
+          ],
+          "unit": "mg",
+          "caps": [
+            10
+          ],
+          "regimen": "0.25 mg/kg"
+        },
+        {
+          "name": "PR Diazepam",
+          "factors": [
+            0.2,
+            0.5
+          ],
+          "unit": "mg",
+          "caps": [
+            20,
+            20
+          ],
+          "regimen": "0.2–0.5 mg/kg"
+        },
+        {
+          "name": "IV Phenytoin",
+          "factors": [
+            20
+          ],
+          "unit": "mg",
+          "caps": [
+            2000
+          ],
+          "regimen": "20 mg/kg"
+        },
+        {
+          "name": "IV Phenobarbitone",
+          "factors": [
+            20
+          ],
+          "unit": "mg",
+          "caps": [
+            1000
+          ],
+          "regimen": "20 mg/kg"
+        },
+        {
+          "name": "IV Cefotaxime / Ceftriaxone",
+          "factors": [
+            50
+          ],
+          "unit": "mg",
+          "caps": [
+            2000
+          ],
+          "regimen": "50 mg/kg"
+        },
+        {
+          "name": "IV Sodium bicarbonate 8.4%",
+          "factors": [
+            1
+          ],
+          "unit": "mL",
+          "regimen": "1 mL/kg"
+        },
+        {
+          "name": "IV Calcium gluconate 10%",
+          "factors": [
+            0.5
+          ],
+          "unit": "mL",
+          "caps": [
+            20
+          ],
+          "regimen": "0.5 mL/kg"
+        },
+        {
+          "name": "IV Mannitol 10%",
+          "factors": [
+            0.25,
+            0.5
+          ],
+          "unit": "g",
+          "regimen": "0.25–0.5 g/kg"
+        },
+        {
+          "name": "IV Hypertonic saline 3%",
+          "factors": [
+            3,
+            5
+          ],
+          "unit": "mL",
+          "regimen": "3–5 mL/kg"
+        },
+        {
+          "name": "IV Tranexamic acid",
+          "factors": [
+            15
+          ],
+          "unit": "mg",
+          "caps": [
+            1000
+          ],
+          "regimen": "15 mg/kg"
         }
       ]
     }
