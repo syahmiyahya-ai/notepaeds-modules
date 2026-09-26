@@ -3,6 +3,9 @@
 Publish this folder unchanged on an HTTPS static host. The public address of
 `manifest.json` is the update address entered in NotePaeds Settings.
 
+Published address:
+`https://syahmiyahya-ai.github.io/notepaeds-modules/manifest.json`
+
 For every release:
 
 1. Edit and validate the module in `notepaeds-tauri/modules`.
