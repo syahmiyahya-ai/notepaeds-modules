@@ -1,22 +1,12 @@
 {
-  "schemaVersion": 1,
-  "moduleVersion": "1.2.0",
-  "kind": "calculators",
   "entries": [
     {
+      "enabled": true,
       "id": "arithmetic",
       "kind": "arithmetic",
-      "title": "Calculator",
-      "enabled": true
+      "title": "Calculator"
     },
     {
-      "id": "pas",
-      "kind": "score",
-      "title": "Paediatric Asthma Score (PAS)",
-      "label": "PAS",
-      "enabled": true,
-      "note": "Supplied PAS table. Age 4 overlaps in the 2–4 and 4–5 year bands: select the applicable band explicitly. No respiratory-rate band supplied outside these ages. Select assessed findings only; use the more severe side if asymmetric.",
-      "source": "User-supplied PAS reference",
       "contexts": [
         {
           "id": "ageBand",
@@ -28,11 +18,12 @@
           ]
         }
       ],
+      "enabled": true,
       "fields": [
         {
+          "context": "ageBand",
           "id": "rr",
           "label": "Respiratory rate (breaths/min)",
-          "context": "ageBand",
           "variants": {
             "2–4 years": [
               {
@@ -151,34 +142,33 @@
           ]
         }
       ],
+      "id": "pas",
+      "kind": "score",
+      "label": "PAS",
+      "note": "Supplied PAS table. Age 4 overlaps in the 2–4 and 4–5 year bands: select the applicable band explicitly. No respiratory-rate band supplied outside these ages. Select assessed findings only; use the more severe side if asymmetric.",
       "severity": [
         {
-          "min": 5,
+          "label": "Mild",
           "max": 7,
-          "label": "Mild"
+          "min": 5
         },
         {
-          "min": 8,
+          "label": "Moderate",
           "max": 11,
-          "label": "Moderate"
+          "min": 8
         },
         {
-          "min": 12,
+          "label": "Severe",
           "max": 15,
-          "label": "Severe"
+          "min": 12
         }
-      ]
+      ],
+      "source": "User-supplied PAS reference",
+      "title": "Paediatric Asthma Score (PAS)"
     },
     {
-      "id": "pram",
-      "kind": "score",
-      "title": "Paediatric Respiratory Assessment Measure (PRAM)",
-      "label": "PRAM",
-      "enabled": true,
-      "note": "Complete all five assessed components. Oxygen saturation uses a room-air assessment; do not assume room air or interrupt needed oxygen just to obtain a score. With asymmetric air entry, use the worst-affected lung field. For asymmetric wheeze, use the two worst auscultation zones. A silent chest with minimal/no air entry scores 3 for wheeze, not 0.",
-      "source": "Canadian Paediatric Society — Managing an acute asthma exacerbation in children, Table 1 (2021); checked 10 September 2026.",
-      "sourceUrl": "https://cps.ca/documents/position/managing-an-acute-asthma-exacerbation",
       "contexts": [],
+      "enabled": true,
       "fields": [
         {
           "id": "oxygen",
@@ -271,34 +261,34 @@
           ]
         }
       ],
+      "id": "pram",
+      "kind": "score",
+      "label": "PRAM",
+      "note": "Complete all five assessed components. Oxygen saturation uses a room-air assessment; do not assume room air or interrupt needed oxygen just to obtain a score. With asymmetric air entry, use the worst-affected lung field. For asymmetric wheeze, use the two worst auscultation zones. A silent chest with minimal/no air entry scores 3 for wheeze, not 0.",
       "severity": [
         {
-          "min": 0,
+          "label": "Mild",
           "max": 3,
-          "label": "Mild"
+          "min": 0
         },
         {
-          "min": 4,
+          "label": "Moderate",
           "max": 7,
-          "label": "Moderate"
+          "min": 4
         },
         {
-          "min": 8,
+          "label": "Severe",
           "max": 12,
-          "label": "Severe"
+          "min": 8
         }
-      ]
+      ],
+      "source": "Canadian Paediatric Society — Managing an acute asthma exacerbation in children, Table 1 (2021); checked 10 September 2026.",
+      "sourceUrl": "https://cps.ca/documents/position/managing-an-acute-asthma-exacerbation",
+      "title": "Paediatric Respiratory Assessment Measure (PRAM)"
     },
     {
-      "id": "westley_croup",
-      "kind": "score",
-      "title": "Westley Croup Score",
-      "label": "WESTLEY CROUP",
-      "enabled": true,
-      "note": "Assess the settled child with minimal handling because agitation can worsen upper-airway obstruction. Select only findings that were actually assessed. A score supports severity assessment but does not replace clinical judgement, senior review, or urgent airway management when clinically indicated.",
-      "source": "Ministry of Health Malaysia — Paediatric Protocols for Malaysian Hospitals, 5th Edition, Viral Croup, p.194; severity range at score 12 clarified using the published Westley classification. Checked 14 September 2026.",
-      "sourceUrl": "https://www.moh.gov.my/images/04-penerbitan/penerbitan-klinikal/perkhidmatan-OG-dan-pediatrik/pediatrik/FA_-_Paediatric_Protocols_5th_Edition_MOH_PDF_1-compressed.pdf",
       "contexts": [],
+      "enabled": true,
       "fields": [
         {
           "id": "consciousness",
@@ -391,43 +381,39 @@
           ]
         }
       ],
+      "id": "westley_croup",
+      "kind": "score",
+      "label": "WESTLEY CROUP",
+      "note": "Assess the settled child with minimal handling because agitation can worsen upper-airway obstruction. Select only findings that were actually assessed. A score supports severity assessment but does not replace clinical judgement, senior review, or urgent airway management when clinically indicated.",
       "severity": [
         {
-          "min": 0,
+          "label": "Mild",
           "max": 2,
-          "label": "Mild"
+          "min": 0
         },
         {
-          "min": 3,
+          "label": "Moderate",
           "max": 7,
-          "label": "Moderate"
+          "min": 3
         },
         {
-          "min": 8,
+          "label": "Severe",
           "max": 11,
-          "label": "Severe"
+          "min": 8
         },
         {
-          "min": 12,
+          "label": "Impending respiratory failure",
           "max": 17,
-          "label": "Impending respiratory failure"
+          "min": 12
         }
-      ]
+      ],
+      "source": "Ministry of Health Malaysia — Paediatric Protocols for Malaysian Hospitals, 5th Edition, Viral Croup, p.194; severity range at score 12 clarified using the published Westley classification. Checked 14 September 2026.",
+      "sourceUrl": "https://www.moh.gov.my/images/04-penerbitan/penerbitan-klinikal/perkhidmatan-OG-dan-pediatrik/pediatrik/FA_-_Paediatric_Protocols_5th_Edition_MOH_PDF_1-compressed.pdf",
+      "title": "Westley Croup Score"
     },
     {
-      "id": "pecarn",
-      "kind": "risk-rule",
-      "label": "PECARN",
-      "title": "PECARN — minor head injury",
-      "eligibility": "For children under 18 with blunt head injury within 24 hours and GCS 14–15. Do not apply with suspected abuse, penetrating injury, bleeding disorder, ventricular shunt, brain tumour, neurological disease affecting assessment, or prior CT for this injury. Trivial injury without symptoms except abrasions/lacerations was not studied. Use clinical judgement; this is not a numerical score.",
-      "note": "Two age-specific pathways; all findings must be assessed. A low-risk result does not replace reassessment or safety-netting.",
-      "reference": "Altered mental state: agitation, unusual drowsiness, repeated questions or slow verbal response. Basal skull signs: bruising behind ears/around eyes, blood behind the eardrum or CSF leak.\nSevere mechanism: vehicle crash with ejection, rollover or another passenger killed; pedestrian or unhelmeted cyclist hit by a motor vehicle; high-impact object striking the head; fall >0.9 m if under 2, or >1.5 m if aged 2–17.\nFor intermediate risk, weigh observation versus CT using symptom progression, multiple findings, clinician experience and caregiver preference. Take extra care in infants under 3 months. Percentages are cohort estimates, not personalised probabilities.",
-      "source": "Kuppermann et al. Lancet 2009;374:1160–70, Figure 3. CHOP Acute Head Trauma Pathway. Checked 12 September 2026.",
-      "sourceUrl": "https://www.pecarn.org/studyDatasets/documents/Kuppermann_2009_The-Lancet_000.pdf",
       "bands": [
         {
-          "id": "under2",
-          "label": "under 2 years",
           "fields": [
             {
               "id": "mental",
@@ -460,6 +446,8 @@
               "risk": "intermediate"
             }
           ],
+          "id": "under2",
+          "label": "under 2 years",
           "outcomes": {
             "high": "Higher risk — CT recommended by rule; clinician review required.",
             "intermediate": "Intermediate risk — observation versus CT; clinical judgement required.",
@@ -467,8 +455,6 @@
           }
         },
         {
-          "id": "2to17",
-          "label": "2–17 years",
           "fields": [
             {
               "id": "mental",
@@ -501,302 +487,316 @@
               "risk": "intermediate"
             }
           ],
+          "id": "2to17",
+          "label": "2–17 years",
           "outcomes": {
             "high": "Higher risk — CT recommended by rule; clinician review required.",
             "intermediate": "Intermediate risk — observation versus CT; clinical judgement required.",
             "low": "Very low risk — CT generally not indicated by rule; reassess and safety-net."
           }
         }
-      ]
+      ],
+      "eligibility": "For children under 18 with blunt head injury within 24 hours and GCS 14–15. Do not apply with suspected abuse, penetrating injury, bleeding disorder, ventricular shunt, brain tumour, neurological disease affecting assessment, or prior CT for this injury. Trivial injury without symptoms except abrasions/lacerations was not studied. Use clinical judgement; this is not a numerical score.",
+      "id": "pecarn",
+      "kind": "risk-rule",
+      "label": "PECARN",
+      "note": "Two age-specific pathways; all findings must be assessed. A low-risk result does not replace reassessment or safety-netting.",
+      "reference": "Altered mental state: agitation, unusual drowsiness, repeated questions or slow verbal response. Basal skull signs: bruising behind ears/around eyes, blood behind the eardrum or CSF leak.\nSevere mechanism: vehicle crash with ejection, rollover or another passenger killed; pedestrian or unhelmeted cyclist hit by a motor vehicle; high-impact object striking the head; fall >0.9 m if under 2, or >1.5 m if aged 2–17.\nFor intermediate risk, weigh observation versus CT using symptom progression, multiple findings, clinician experience and caregiver preference. Take extra care in infants under 3 months. Percentages are cohort estimates, not personalised probabilities.",
+      "source": "Kuppermann et al. Lancet 2009;374:1160–70, Figure 3. CHOP Acute Head Trauma Pathway. Checked 12 September 2026.",
+      "sourceUrl": "https://www.pecarn.org/studyDatasets/documents/Kuppermann_2009_The-Lancet_000.pdf",
+      "title": "PECARN — minor head injury"
     },
     {
+      "enabled": true,
       "id": "resus",
       "kind": "resus",
-      "title": "Resus medications — one weight",
-      "enabled": true,
-      "source": "PED HTA Paediatric Emergency Drug Calculator, May 2024. Displayed maxima used as instructed.",
-      "sourceUrl": "https://docs.google.com/spreadsheets/d/16BNlgbZCMMKfORggqb511NgsKDWUEQ28/edit?gid=2121511188",
       "note": "Weight applies to every row. Separate neonatal/child and indication-specific rows remain visible; select the appropriate regimen. Results follow the supplied May 2024 workbook. Volumes are shown only where supplied or explicitly defined.",
       "rows": [
         {
-          "name": "IV/IO Adrenaline (0.1 mg/mL)",
-          "factors": [
-            0.01
-          ],
-          "unit": "mg",
           "caps": [
             1
           ],
-          "regimen": "0.01 mg/kg; maximum 1 mg"
-        },
-        {
-          "name": "IV/IO Adrenaline diluted volume",
-          "factors": [
-            0.1
-          ],
-          "unit": "mL",
-          "caps": [
-            10
-          ],
-          "regimen": "0.1 mg/mL: dilute 1 mL of 1 mg/mL with 9 mL NS"
-        },
-        {
-          "name": "IV Fluid bolus (except dengue)",
-          "factors": [
-            10
-          ],
-          "unit": "mL",
-          "regimen": "10 mL/kg over 5–10 minutes"
-        },
-        {
-          "name": "IV Fluid bolus (cardiogenic shock) / packed cells",
-          "factors": [
-            5
-          ],
-          "unit": "mL",
-          "regimen": "5 mL/kg"
-        },
-        {
-          "name": "IV Glucose / Dextrose 10%",
-          "factors": [
-            3
-          ],
-          "unit": "mL",
-          "regimen": "3 mL/kg"
-        },
-        {
-          "name": "DC shock",
-          "factors": [
-            4
-          ],
-          "unit": "J",
-          "caps": [
-            360
-          ],
-          "regimen": "4 J/kg; maximum 360 J"
-        },
-        {
-          "name": "IV Amiodarone (VF/pVT)",
-          "factors": [
-            5
-          ],
-          "unit": "mg",
-          "caps": [
-            300
-          ],
-          "regimen": "5 mg/kg over 3 minutes"
-        },
-        {
-          "name": "IM Adrenaline 1 mg/mL (anaphylaxis)",
           "factors": [
             0.01
           ],
-          "unit": "mg",
+          "name": "IV/IO Adrenaline (0.1 mg/mL)",
+          "regimen": "0.01 mg/kg; maximum 1 mg",
+          "unit": "mg"
+        },
+        {
+          "caps": [
+            10
+          ],
+          "factors": [
+            0.1
+          ],
+          "name": "IV/IO Adrenaline diluted volume",
+          "regimen": "0.1 mg/mL: dilute 1 mL of 1 mg/mL with 9 mL NS",
+          "unit": "mL"
+        },
+        {
+          "factors": [
+            10
+          ],
+          "name": "IV Fluid bolus (except dengue)",
+          "regimen": "10 mL/kg over 5–10 minutes",
+          "unit": "mL"
+        },
+        {
+          "factors": [
+            5
+          ],
+          "name": "IV Fluid bolus (cardiogenic shock) / packed cells",
+          "regimen": "5 mL/kg",
+          "unit": "mL"
+        },
+        {
+          "factors": [
+            3
+          ],
+          "name": "IV Glucose / Dextrose 10%",
+          "regimen": "3 mL/kg",
+          "unit": "mL"
+        },
+        {
+          "caps": [
+            360
+          ],
+          "factors": [
+            4
+          ],
+          "name": "DC shock",
+          "regimen": "4 J/kg; maximum 360 J",
+          "unit": "J"
+        },
+        {
+          "caps": [
+            300
+          ],
+          "factors": [
+            5
+          ],
+          "name": "IV Amiodarone (VF/pVT)",
+          "regimen": "5 mg/kg over 3 minutes",
+          "unit": "mg"
+        },
+        {
           "caps": [
             0.5
           ],
+          "factors": [
+            0.01
+          ],
+          "minimum": 0.1,
+          "name": "IM Adrenaline 1 mg/mL (anaphylaxis)",
           "regimen": "Source specifies age >6 months; minimum 0.1 mg",
-          "minimum": 0.1
+          "unit": "mg"
         },
         {
-          "name": "IV Fentanyl (intubation)",
-          "factors": [
-            1,
-            2
-          ],
-          "unit": "mcg",
           "caps": [
             50,
             100
           ],
-          "regimen": "1–2 mcg/kg; displayed maximum 50–100 mcg"
-        },
-        {
-          "name": "IV Ketamine (intubation)",
           "factors": [
             1,
             2
           ],
-          "unit": "mg",
-          "regimen": "1–2 mg/kg"
+          "name": "IV Fentanyl (intubation)",
+          "regimen": "1–2 mcg/kg; displayed maximum 50–100 mcg",
+          "unit": "mcg"
         },
         {
-          "name": "IV Propofol (intubation)",
+          "factors": [
+            1,
+            2
+          ],
+          "name": "IV Ketamine (intubation)",
+          "regimen": "1–2 mg/kg",
+          "unit": "mg"
+        },
+        {
           "factors": [
             0.5,
             2
           ],
-          "unit": "mg",
-          "regimen": "0.5–2 mg/kg"
+          "name": "IV Propofol (intubation)",
+          "regimen": "0.5–2 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "IV Suxamethonium (neonate)",
+          "caps": [
+            100
+          ],
           "factors": [
             2
           ],
-          "unit": "mg",
+          "name": "IV Suxamethonium (neonate)",
+          "regimen": "2 mg/kg",
+          "unit": "mg"
+        },
+        {
           "caps": [
             100
           ],
-          "regimen": "2 mg/kg"
-        },
-        {
-          "name": "IV Suxamethonium (child)",
           "factors": [
             1
           ],
-          "unit": "mg",
-          "caps": [
-            100
-          ],
-          "regimen": "1 mg/kg"
+          "name": "IV Suxamethonium (child)",
+          "regimen": "1 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "IV Rocuronium",
-          "factors": [
-            0.6,
-            1.2
-          ],
-          "unit": "mg",
           "caps": [
             50,
             50
           ],
+          "factors": [
+            0.6,
+            1.2
+          ],
+          "name": "IV Rocuronium",
           "regimen": "0.6–1.2 mg/kg; source formula caps at 50 mg and rounds to whole mg",
-          "round": 0
+          "round": 0,
+          "unit": "mg"
         },
         {
-          "name": "IV Morphine",
-          "factors": [
-            0.1,
-            0.2
-          ],
-          "unit": "mg",
           "caps": [
             10,
             10
           ],
-          "regimen": "0.1–0.2 mg/kg"
-        },
-        {
-          "name": "IV Midazolam (slow bolus)",
           "factors": [
             0.1,
             0.2
           ],
-          "unit": "mg",
+          "name": "IV Morphine",
+          "regimen": "0.1–0.2 mg/kg",
+          "unit": "mg"
+        },
+        {
           "caps": [
             5,
             10
           ],
-          "regimen": "0.1–0.2 mg/kg"
+          "factors": [
+            0.1,
+            0.2
+          ],
+          "name": "IV Midazolam (slow bolus)",
+          "regimen": "0.1–0.2 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "IV Diazepam",
-          "factors": [
-            0.25
-          ],
-          "unit": "mg",
           "caps": [
             10
           ],
-          "regimen": "0.25 mg/kg"
+          "factors": [
+            0.25
+          ],
+          "name": "IV Diazepam",
+          "regimen": "0.25 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "PR Diazepam",
-          "factors": [
-            0.2,
-            0.5
-          ],
-          "unit": "mg",
           "caps": [
             20,
             20
           ],
-          "regimen": "0.2–0.5 mg/kg"
+          "factors": [
+            0.2,
+            0.5
+          ],
+          "name": "PR Diazepam",
+          "regimen": "0.2–0.5 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "IV Phenytoin",
-          "factors": [
-            20
-          ],
-          "unit": "mg",
           "caps": [
             2000
           ],
-          "regimen": "20 mg/kg"
-        },
-        {
-          "name": "IV Phenobarbitone",
           "factors": [
             20
           ],
-          "unit": "mg",
+          "name": "IV Phenytoin",
+          "regimen": "20 mg/kg",
+          "unit": "mg"
+        },
+        {
           "caps": [
             1000
           ],
-          "regimen": "20 mg/kg"
+          "factors": [
+            20
+          ],
+          "name": "IV Phenobarbitone",
+          "regimen": "20 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "IV Cefotaxime / Ceftriaxone",
-          "factors": [
-            50
-          ],
-          "unit": "mg",
           "caps": [
             2000
           ],
-          "regimen": "50 mg/kg"
+          "factors": [
+            50
+          ],
+          "name": "IV Cefotaxime / Ceftriaxone",
+          "regimen": "50 mg/kg",
+          "unit": "mg"
         },
         {
-          "name": "IV Sodium bicarbonate 8.4%",
           "factors": [
             1
           ],
-          "unit": "mL",
-          "regimen": "1 mL/kg"
+          "name": "IV Sodium bicarbonate 8.4%",
+          "regimen": "1 mL/kg",
+          "unit": "mL"
         },
         {
-          "name": "IV Calcium gluconate 10%",
-          "factors": [
-            0.5
-          ],
-          "unit": "mL",
           "caps": [
             20
           ],
-          "regimen": "0.5 mL/kg"
+          "factors": [
+            0.5
+          ],
+          "name": "IV Calcium gluconate 10%",
+          "regimen": "0.5 mL/kg",
+          "unit": "mL"
         },
         {
-          "name": "IV Mannitol 10%",
           "factors": [
             0.25,
             0.5
           ],
-          "unit": "g",
-          "regimen": "0.25–0.5 g/kg"
+          "name": "IV Mannitol 10%",
+          "regimen": "0.25–0.5 g/kg",
+          "unit": "g"
         },
         {
-          "name": "IV Hypertonic saline 3%",
           "factors": [
             3,
             5
           ],
-          "unit": "mL",
-          "regimen": "3–5 mL/kg"
+          "name": "IV Hypertonic saline 3%",
+          "regimen": "3–5 mL/kg",
+          "unit": "mL"
         },
         {
-          "name": "IV Tranexamic acid",
-          "factors": [
-            15
-          ],
-          "unit": "mg",
           "caps": [
             1000
           ],
-          "regimen": "15 mg/kg"
+          "factors": [
+            15
+          ],
+          "name": "IV Tranexamic acid",
+          "regimen": "15 mg/kg",
+          "unit": "mg"
         }
-      ]
+      ],
+      "source": "PED HTA Paediatric Emergency Drug Calculator, May 2024. Displayed maxima used as instructed.",
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/16BNlgbZCMMKfORggqb511NgsKDWUEQ28/edit?gid=2121511188",
+      "title": "Resus medications — one weight"
     }
-  ]
+  ],
+  "kind": "calculators",
+  "moduleVersion": "1.2.1",
+  "schemaVersion": 1
 }
