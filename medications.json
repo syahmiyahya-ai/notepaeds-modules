@@ -3156,11 +3156,11 @@
         "purpose": "2/3 Maintenance"
       },
       "id": "regimen-mussumve-n7wdm",
-      "name": "IVD 2/3rd Maintennace",
+      "name": "IVD 2/3rd Maintenance",
       "orderPrefix": "IV",
       "route": "IV",
       "text": "IV fluids NSD5% — 2/3 Maintenance (enter patient weight)",
-      "title": "IVD 2/3rd Maintennace"
+      "title": "IVD 2/3rd Maintenance"
     },
     {
       "category": "IV fluids",
@@ -3180,10 +3180,11 @@
       "title": "IVD 1/2 Maintenance"
     },
     {
-      "administration": "Dengue with warning signs :\ncommmence Normal Saline at 5 - 7 ml/kg over 1 hour",
+      "administration": "Dengue with warning signs :\ncommence Normal Saline at 5 - 7 ml/kg over 1 hour",
       "category": "IV fluids",
       "fluidTemplate": {
-        "durationUnit": "minutes",
+        "duration": "1",
+        "durationUnit": "hours",
         "fluid": "NS",
         "instructions": "",
         "mlPerKg": "5",
@@ -3280,20 +3281,20 @@
     {
       "administration": "",
       "calcPerKg": null,
-      "category": "Antibiotics",
+      "category": "Steroid",
       "dose": "0.6mg/kg",
       "duration": "",
       "emergency": "",
-      "formulations": "Syr 200mg/5ml | Tab 400mg",
+      "formulations": "",
       "frequency": "STAT ",
       "id": "regimen-muswa5ni-gt4wf",
-      "indication": "Gut Prokinetic",
+      "indication": "Croup",
       "maxDaily": "",
       "maxSingle": "",
       "name": "Dexamethasone",
       "orderPrefix": "Sy",
       "organRisk": "",
-      "otherName": "EES",
+      "otherName": "",
       "regimen": {
         "amount": "0.6",
         "basis": "dose",
@@ -3317,7 +3318,7 @@
       "weightBands": ""
     },
     {
-      "administration": "Dengue with warning signs :\ncommmence Normal Saline at 5 - 7 ml/kg over 1 hour\n\nDengue without warning signs :\ncommmence Normal Saline at 3 - 5 ml/kg \ncommmence Normal Saline at 2 - 3 ml/kg ",
+      "administration": "Dengue with warning signs :\ncommence Normal Saline at 5 - 7 ml/kg over 1 hour\n\nDengue without warning signs :\ncommence Normal Saline at 3 - 5 ml/kg \ncommence Normal Saline at 2 - 3 ml/kg ",
       "category": "IV fluids",
       "enabled": true,
       "fluidTemplate": {
@@ -3336,7 +3337,7 @@
       "title": "IVD NS 3ml/KG"
     },
     {
-      "administration": "Dengue with warning signs :\ncommmence Normal Saline at 5 - 7 ml/kg over 1 hour\n\nDengue without warning signs :\ncommmence Normal Saline at 3 - 5 ml/kg \ncommmence Normal Saline at 2 - 3 ml/kg ",
+      "administration": "Dengue with warning signs :\ncommence Normal Saline at 5 - 7 ml/kg over 1 hour\n\nDengue without warning signs :\ncommence Normal Saline at 3 - 5 ml/kg \ncommence Normal Saline at 2 - 3 ml/kg ",
       "category": "IV fluids",
       "enabled": true,
       "fluidTemplate": {
@@ -3357,6 +3358,7 @@
     {
       "category": "IV fluids",
       "fluidTemplate": {
+        "duration": "1",
         "durationUnit": "hours",
         "fluid": "NS",
         "instructions": "",
@@ -3373,6 +3375,6 @@
     }
   ],
   "kind": "medications",
-  "moduleVersion": "1.1.2",
+  "moduleVersion": "1.1.3",
   "schemaVersion": 1
 }
