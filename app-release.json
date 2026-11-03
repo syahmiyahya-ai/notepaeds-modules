@@ -1,0 +1,4 @@
+{
+  "payload": "{\"version\":\"9.3.5\",\"notes\":\"Inline // snippets, ;; medications and IV fluids (mL/kg, bolus and Holliday-Segar), ## scoring; compact dose formatting, optional limits, tracked manual edits, reviewed regimen saving and red arithmetic mismatch feedback.\",\"url\":\"https://github.com/syahmiyahya-ai/notepaeds-modules/releases/download/v9.3.5/NotePaeds.exe\",\"sha256\":\"1ee9d9af7c5153fcc73ca248b55f0ba78fbb86d3b91a6aa8ae9d9154557ee521\"}",
+  "signature": "ca4f396470117c43ad52651066aa39c5e83ec139375f8a25a97a34db65bc8986fbcf4f4431b128b2d31963274b576400f763bc20e47bf2698b66edf07c9e1e04"
+}
